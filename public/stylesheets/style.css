@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,300&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 14px "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.empty {
+  font-size: 16px;
+  color:#ffc107;
+}
+
+/* LOGIN PAGE */
+.logout {
+  margin-left: auto;
+  margin-right: 15px;
+}
+
+.home {
+  color: #FFFFFF;
+  text-shadow: 1px 1px 1px black;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.bg-video {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.navItem{
+  margin-bottom: 10px;
+}
+
+.get_started{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+.get_started h2 {
+  font-size: 45px;
+  font-weight: 600;
+  -webkit-text-stroke: 0.7px #fff;
+  color: transparent !important;
+}
+
+.header-weather {
+  margin-bottom: 50px;
+  color: #fff;
+  background-color: #000000 !important;
+  height: 75px;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
+.formArea {
+  z-index: 2;
+  position: relative;
+}
+
+.form-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px !important;  
+}
+
+.form-group label {
+  font-style: italic;
+}
+
+.form-group input {
+  width: 80%;
+  background-color: rgba(255, 255, 255, 0.6);
+  outline-style: none !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+
+.btn {
+  border: none;
+  width: 100px;
+}
+
+.btn-login:hover {
+  background-color: #000000;
+}
+
+/* WEATHER APP */
+.logout:hover {
+  color: white;
+}
+
+.btn-add-city:hover {
+  background-color: #000000;
+  color: #fff;
+}
+
+.deletepicto{
+  color: #FFBF43
+}
+
+.update-cities {
+  color: #000000;
+  margin: 15px;
+}
+
+#mapid { height: 400px; }
+
+/* Responsive */
+
+@media (min-aspect-ration: 16/9){
+  .bg-video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ration: 16/9){
+  .bg-video {
+    width: auto;
+    height: 100%;
+  }
+}
