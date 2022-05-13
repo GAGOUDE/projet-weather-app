@@ -4,7 +4,7 @@ const router = express.Router();
 const userModel = require('../models/users');
 
 //===== Sign Up Route
-router.post('/sign-up', async function(req,res,next){
+router.post('https://projet-weather-app.herokuapp.com/sign-up', async function(req,res,next){
 
   // Recherche d'un doublon
   let searchUser = await userModel.findOne({
@@ -27,9 +27,9 @@ router.post('/sign-up', async function(req,res,next){
   
     console.log(req.session.user)
   
-    res.redirect('/weather')
+    res.redirect('https://projet-weather-app.herokuapp.com/weather')
   } else {
-    res.redirect('/')
+    res.redirect('/https://projet-weather-app.herokuapp.com')
   }
   
 });
@@ -51,7 +51,7 @@ router.post('https://projet-weather-app.herokuapp.com/sign-in', async function(r
       name: searchUser.username,
       id: searchUser._id
     }
-    res.redirect('/weather')
+    res.redirect('https://projet-weather-app.herokuapp.com/weather')
   } else {
     console.log("User inconnu")
 
@@ -62,7 +62,7 @@ router.post('https://projet-weather-app.herokuapp.com/sign-in', async function(r
 });
 
 //===== Deconnexion 
-router.get('/logout', function(req,res,next){
+router.get('https://projet-weather-app.herokuapp.com/logout', function(req,res,next){
 
   // req.session.user = null;
 

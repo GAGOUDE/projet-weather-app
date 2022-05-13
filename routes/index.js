@@ -6,7 +6,7 @@ const cityModel = require('../models/cities');
 
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/https://projet-weather-app.herokuapp.com', function(req, res, next) {
   res.render('login');
 });
 
@@ -21,7 +21,7 @@ router.get('https://projet-weather-app.herokuapp.com/weather', async function(re
 });
 
 // Ajouter les données météorologiques de villes venant de l'API 
-router.post('/add-city', async function(req, res, next){
+router.post('https://projet-weather-app.herokuapp.com/add-city', async function(req, res, next){
   const data = request("GET", `https://api.openweathermap.org/data/2.5/weather?q=${req.body.newcity}&units=metric&lang=fr&appid=0c815b9455235455a301668a56c67b18`) 
   const dataAPI = JSON.parse(data.body)
 
@@ -47,7 +47,7 @@ router.post('/add-city', async function(req, res, next){
 });
 
 // Supprimer les donnée d'une ville
-router.get('/delete-city', async function(req, res, next){
+router.get('https://projet-weather-app.herokuapp.com/delete-city', async function(req, res, next){
   await cityModel.deleteOne({
     _id: req.query.id
   })
