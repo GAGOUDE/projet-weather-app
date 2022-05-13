@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
 });
 
 //===== Weather Home Page
-router.get('/weather', async function(req, res, next){
+router.get('https://projet-weather-app.herokuapp.com/weather', async function(req, res, next){
   if(req.session.user == null){
     res.redirect('/')
   } else {
