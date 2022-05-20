@@ -29,6 +29,7 @@ router.post('/sign-up', async function(req,res,next){
   
     res.redirect('/weather')
   } else {
+
     res.redirect('/')
   }
   
