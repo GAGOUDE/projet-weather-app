@@ -7,7 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
-var mongoose = require('./models/connection')
+var mongoose = require('./models/connection');
 
 var session = require("express-session");
 
