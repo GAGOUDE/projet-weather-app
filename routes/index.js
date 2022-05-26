@@ -24,9 +24,11 @@ router.get('/weather', async function(req, res, next){
   }
 });
 
+const WEATHER_API_KEY = process.env.WEATHER_API_KEY;
+
 // Ajouter les données météorologiques de villes venant de l'API 
 router.post('/add-city', async function(req, res, next){
-  const data = request("GET", `https://api.openweathermap.org/data/2.5/weather?q=${req.body.newcity}&units=metric&lang=fr&appid=0c815b9455235455a301668a56c67b18`) 
+  const data = request("GET", `https://api.openweathermap.org/data/2.5/weather?q=${req.body.newcity}&units=metric&lang=fr&appid=${WEATHER_API_KEY}`) 
   const dataAPI = JSON.parse(data.body)
 
   const alreadyExist = await cityModel.findOne({ name: req.body.newcity.toLowerCase() });
