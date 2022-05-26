@@ -6,7 +6,7 @@ dotenv.config();
 const BDD_URL = process.env.BDD_URL;
 
 const options = {
-    connectTimeoutMS: 30000,
+    connectTimeoutMS: 5000,
     useUnifiedTopology : true,
     useNewUrlParser: true,
 }
