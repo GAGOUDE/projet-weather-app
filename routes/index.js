@@ -2,12 +2,7 @@ const express = require('express');
 const router = express.Router();
 const request = require('sync-request');
 
-const dotenv = require("dotenv");
-dotenv.config();
-
 const cityModel = require('../models/cities');
-
-const URL = process.env.PORT;
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
