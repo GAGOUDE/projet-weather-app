@@ -13,7 +13,6 @@ var session = require("express-session");
 
 var app = express();
 
-
 app.use( 
   session({  
     secret: 'a4f8071f-c873-4447-8ee2', 
